@@ -1,3 +1,11 @@
-<div *ngFor="let pres of presentations">
-  <h1>{{pres.authors}}</h1>
+<div>
+  <div style="float: left;">
+    <button (click)="setVisibleA()">Display data from component one</button>
+    <div *ngIf="visibleA">
+      <div *ngFor="let pres of presentations">
+        <p>{{pres.authors[0] | uppercase}}</p>
+      </div>
+    </div>
+  </div>
+  <app-two-component style="float: left;"></app-two-component>
 </div>

@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {DataService} from '../model/services/data.service';
-import {ModelExample} from '../model/modelExample';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../model/services/data.service';
+import { ModelExample } from '../model/modelExample';
+import { Example } from '../model/example';
 
 @Component({
   selector: 'app-one',
@@ -8,8 +9,8 @@ import {ModelExample} from '../model/modelExample';
   styleUrls: ['./one.component.css']
 })
 export class OneComponent implements OnInit {
-  public presentations: Array<ModelExample> = [];
-
+  presentations: Array<ModelExample> = [];
+  visibleA = false;
   constructor(private dataService: DataService) {
   }
 
@@ -18,5 +19,10 @@ export class OneComponent implements OnInit {
       this.presentations = data;
     });
   }
-
+  public getExamplesData() {
+    return this.getExamplesData;
+  }
+  setVisibleA() {
+    this.visibleA = !this.visibleA;
+  }
 }

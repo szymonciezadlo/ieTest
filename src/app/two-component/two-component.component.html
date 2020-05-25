@@ -1,0 +1,6 @@
+<button (click)="setVisibleB()">Display data from component two</button>
+<div *ngIf="visibleB">
+    <div *ngFor="let row of exmapleData">
+        <p>{{row.name | example: "PIPE"}} {{row.surname}}</p>
+    </div>
+</div>
