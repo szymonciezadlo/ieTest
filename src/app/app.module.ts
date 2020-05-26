@@ -8,6 +8,8 @@ import { OneComponent } from './one/one.component';
 import { DataService } from './model/services/data.service';
 import { TwoComponentComponent } from './two-component/two-component.component';
 import { ExamplePipe } from './pipes/example.pipe';
+import { MyComponentComponent } from './my-component/my-component.component';
+import { ChildComponentComponent } from './my-component/child-component/child-component.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { ExamplePipe } from './pipes/example.pipe';
     OneComponent,
     TwoComponentComponent,
     ExamplePipe,
+    MyComponentComponent,
+    ChildComponentComponent,
   ],
   imports: [
     BrowserModule,

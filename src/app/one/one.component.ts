@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../model/services/data.service';
 import { ModelExample } from '../model/modelExample';
-import { Example } from '../model/example';
 
 @Component({
   selector: 'app-one',

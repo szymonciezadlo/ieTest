@@ -1,0 +1,11 @@
+<h1>Simple HTML header</h1>
+<p><i>Basic HTML paragraph</i></p>
+<div style="float: left;">
+  <button (click)="setButtonClick()">HTML button</button>
+  <div *ngIf="buttonClicked">
+    <li *ngFor="let example of examples" (click)="selectExample(example)">
+      {{example.name | uppercase}} {{example.surname}}
+    </li>
+  </div>
+</div>
+<app-child-component *ngIf="isExampleSelected" [example]="selectedExample"></app-child-component>
